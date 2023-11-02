@@ -1,0 +1,12 @@
+<template>
+	<lightning-card title="Volunteers for this class">
+		<div class="slds-m-around_medium">
+			<template lwc:if={volunteerList}>
+				<template for:each={volunteerList} for:item="volunteer">
+					<p key={volunteer.Id}>{volunteer.Volunteer__r.Name} Email {volunteer.Volunteer__r.EMail__c} Phone {volunteer.Volunteer__r.Phone__c}</p>
+				</template>
+			</template>
+		</div>
+	</lightning-card>
+</template>
+<!-- this is a coment cntl ?/ -->

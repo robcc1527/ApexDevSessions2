@@ -1,0 +1,13 @@
+<template>
+	<lightning-card title={titleString}>
+		<div class="slds-m-around_medium">
+			<template lwc:if={classList}>
+				<template for:each={classList} for:item="course">
+					<p key={course.Id}>{course.Name}</p>
+                    <c-display-volunteers key={course.Id} record-id={course.Id}></c-display-volunteers>
+				</template>
+			</template>
+		</div>
+	</lightning-card>
+</template>
+<!-- this is a coment cntl ?/ -->
